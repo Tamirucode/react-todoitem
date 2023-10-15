@@ -7,17 +7,46 @@ import SignUpForm from "./pages/auth/SignUpForm";
 import SignInForm from "./pages/auth/SignInForm";
 import ToDoListCreateForm from "./pages/todolists/ToDoListCeateForm";
 import ToDoListPage from "./pages/todolists/ToDoListPage";
+import ToDoItemCreateForm from "./pages/todoitems/ToDoItemCreateForm";
+import ToDoItemPage from "./pages/todoitems/ToDoItemPage";
+import ToDoListsPage from "./pages/todolists/ToDoListsPage";
+import { useCurrentUser } from "./contexts/CurrentUserContext";
+import ToDoListEditForm from "./pages/todolists/ToDoListEditForm";
+import ToDoItemEditForm from "./pages/todoitems/ToDoItemEditForm";
 function App() {
+const currentUser = useCurrentUser();
+const profile_id = currentUser?.profile_id || "";
   return (
     <div className={styles.App}>
       <NavBar />
       <Container className={styles.Main}>
         <Switch>
-          <Route exact path="/" render={() => <h1>Home page</h1>} />
+        <Route
+            exact
+            path="/"
+            render={() => (
+              <ToDoListsPage message="No results found. Adjust the search keyword." />
+            )}
+          />
+          
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <ToDoListsPage
+                message="No results found. Adjust the search keyword or like a post."
+                filter={`owner__profile=${profile_id}&ordering=-created_at&`}
+              />
+            )}
+          />
           <Route exact path="/signin" render={() => <SignInForm />} />
           <Route exact path="/signup" render={() => <SignUpForm />} />
-          <Route exact path="/todolists/create" render={() => <ToDoListCreateForm />} />
+          <Route exact path="/todolists/" render={() => <ToDoListCreateForm />} />
           <Route exact path="/todolists/:id" render={() => <ToDoListPage />} />
+          <Route exact path="/todoitems/" render={() => <ToDoItemCreateForm />} />
+          <Route exact path="/todoitems/:id" render={() => <ToDoItemPage />} />
+          <Route exact path="/todolists/:id/edit" render={() => <ToDoListEditForm />} />
+          <Route exact path="/todoitems/:id/edit" render={() => <ToDoItemEditForm />} />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>

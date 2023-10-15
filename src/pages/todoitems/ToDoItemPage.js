@@ -5,21 +5,21 @@ import Row from "react-bootstrap/Row";
 import { Button } from "react-bootstrap";
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
-import ToDoList from "./ToDoList";
+import ToDoItem from "./ToDoItem";
 import btnStyles from "../../styles/Button.module.css";
 
-function ToDoListPage() {
+function ToDoItemPage() {
   const { id } = useParams();
-  const [todolist, setToDoList] = useState({ results: [] });
+  const [todoitem, setToDoItem] = useState({ results: [] });
 
   useEffect(() => {
     const handleMount = async () => {
       try {
-        const [{ data: todolist }] = await Promise.all([
-          axiosReq.get(`/todolists/${id}`),
+        const [{ data: todoitem }] = await Promise.all([
+          axiosReq.get(`/todoitems/${id}`),
         ]);
-        setToDoList({ results: [todolist] });
-        console.log(todolist);
+        setToDoItem({ results: [todoitem] });
+        console.log(todoitem);
       } catch (err) {
         console.log(err);
       }
@@ -32,7 +32,7 @@ function ToDoListPage() {
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
         <p>Popular profiles for mobile</p>
-        <ToDoList {...todolist.results[0]} setToDoLists={setToDoList} ToDoListPage />
+        <ToDoItem {...todoitem.results[0]} setToDoItems={setToDoItem} ToDoItemPage />
         
       </Col>
       
@@ -40,4 +40,4 @@ function ToDoListPage() {
   );
 }
 
-export default ToDoListPage;
+export default ToDoItemPage;

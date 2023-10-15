@@ -1,32 +1,49 @@
-import React, { useState } from "react";
+import React, {  useEffect, useState } from "react";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
+
 import Alert from "react-bootstrap/Alert";
-import ListGroup from "react-bootstrap/ListGroup"; 
 
+import { ListGroup } from "react-bootstrap";
 
-import styles from "../../styles/ToDoListCreateEditForm.module.css";
 
 import btnStyles from "../../styles/Button.module.css";
 
-import { useHistory } from "react-router";
+import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
 function ToDoListCreateForm() {
   const [errors, setErrors] = useState({});
 
   const [todolistData, setToDoListData] = useState({
-    title: "",
+    
+    title: ""
+   
+    
     
   });
   const { title } = todolistData;
 
-  
   const history = useHistory();
+  const { id } = useParams();
+  useEffect(() => {
+    const handleMount = async () => {
+      try {
+        const { data } = await axiosReq.get(`/todolists/${id}/`);
+        const { title, is_owner} = data;
+
+        is_owner ? setToDoListData({ title }) : history.push("/");
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    handleMount();
+  }, [history, id]);
+
 
   const handleChange = (event) => {
     setToDoListData({
@@ -40,23 +57,25 @@ function ToDoListCreateForm() {
     event.preventDefault();
     const formData = new FormData();
 
+    
     formData.append("title", title);
     
-
     try {
-      const { data } = await axiosReq.post("/todolists/", formData);
-      history.push(`/todolists/${data.id}`);
-    } catch (err) {
-      console.log(err);
-      if (err.response?.status !== 401) {
-        setErrors(err.response?.data);
-      }
-    }
-  };
+        await axiosReq.put(`/todolists/${id}/`, formData);
+         history.push(`/todolists/${id}`);
+       } catch (err) {
+         console.log(err);
+         if (err.response?.status !== 401) {
+           setErrors(err.response?.data);
+         }
+       }
+     };
+   
 
   const textFields = (
     <div className="text-center">
-      <Form.Group>
+      
+    <Form.Group>
         <Form.Label>Title</Form.Label>
         <Form.Control
           type="text"
@@ -70,8 +89,9 @@ function ToDoListCreateForm() {
           {message}
         </Alert>
       ))}
-
       
+       
+         
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
@@ -87,17 +107,20 @@ function ToDoListCreateForm() {
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
+      
         <Col md={{ span: 5, offset: 4 }}>
           <ListGroup className="mb-3">
           {textFields}
           </ListGroup>
-          
+            
              
               
 
             
          
         </Col>
+        
+       
         
       </Row>
     </Form>
