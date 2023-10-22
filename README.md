@@ -1,9 +1,13 @@
 # Todolist App
 
 The todolist website is a landing page for list of users name and their associated todolist with created date.
+
 The todolist app offers organize and manage tasks more efficiently.
+
 Users of this website will be able to create a list of todoitem that they need to complete within a certain timeframe.
+
 It also allows assign them due dates and prioritize them so they stay focused on what todoitems most.
+
 This site is targeted towards adults and young children who want to plan personal and work schedules.
 
 ![ppp5 landing page](https://github.com/Tamirucode/react-todoitem/assets/116649197/09032e11-1891-48bd-8916-8a30fb8dc131)
@@ -22,3 +26,55 @@ This site is targeted towards adults and young children who want to plan persona
        
  ![ppp5 navlink](https://github.com/Tamirucode/react-todoitem/assets/116649197/c9568d6d-b3a6-4363-b6e3-3ad634487beb)
     
+
+- The Home Section
+
+    - The home section gives list of users name and their respective todolist
+
+    - This section shows todolist and date created by users.
+ 
+    
+![ppp5 home](https://github.com/Tamirucode/react-todoitem/assets/116649197/ac543c00-0b0b-4ffa-bde3-76f9a9c2296a)
+
+
+ - The home section includes search bar to users can find specific todolist title or filter todolists by user name
+  
+![ppp 5 filter  user name](https://github.com/Tamirucode/react-todoitem/assets/116649197/30797281-51b9-40f4-9622-99e9e8af0720)
+
+- The Sign Up Form
+    
+    - The sign up section has a form to collect user information so they can sign up to the todolist site
+ 
+    - The form collects user name and password name
+ 
+    - The sign up form is valuable to the user as it gives them the ability to sign up to join the todolist site.
+
+![ppp5 sign up from ](https://github.com/Tamirucode/react-todoitem/assets/116649197/410ce379-92cf-4120-ba6f-73e80821ff53)
+
+- The Sign in Form
+
+    - The sign in section has a form to login to the todolist site.
+ 
+    - The sign in form request valid username and password.
+ 
+![sign in  form](https://github.com/Tamirucode/react-todoitem/assets/116649197/f67fe527-1a8a-4cc5-b44f-0b1dfdde5df6)
+
+- The ToDoItem Section
+
+    - The ToDoItem section gives list of users name and their respective todoitem
+
+    - This section shows todoitem and date created by users.
+ 
+![ppp5 todoitem](https://github.com/Tamirucode/react-todoitem/assets/116649197/b5731ba3-27fb-4ed1-b107-e44fd5c25ce7)
+
+- The todoitem section includes search bar to users can find specific todoitem title or filter todoitem by username
+
+![ppp5 filter  management](https://github.com/Tamirucode/react-todoitem/assets/116649197/5b89ff58-4d52-4ad2-9222-2327bf6c8db4)
+
+
+- The The Profile Section
+
+    - The profile section shows how many to todolists and todoitems are created by user
+
+![ppp5 ho many todolist](https://github.com/Tamirucode/react-todoitem/assets/116649197/4217e624-31c3-4c7e-ac9f-ed9da2d7843e)
+
