@@ -18,14 +18,14 @@ This site is targeted towards adults and young children who want to plan persona
 
 ## How to use todolist app
 
-    In this version, first the user need to create an account using sign up form.
+ - In this version, first the user need to create an account by using sign up form.
 
     Once an account is created, they need to login with their password and username. Afterthat, the user can see top left navbar link
 
-    there is a button addtodolist, then click that button, they will greet with blank forms fill out todolist, next they click create button
+    there is a button addtodolist, then click that button, they will greet with blank form need to fill out todolist, after they completed, click the create button
 
-    take them a new blank form used for to create todoitem, after they finished fill out form click save and go back to ToDoItem navlink , they need 
-    
+    which takes them a new blank form used for to create todoitem, after they finished fill out the form click save and go back to ToDoItem navlink, they need 
+   
     to open this page to see their created todoitem.
 
 ## Features
@@ -99,3 +99,34 @@ This site is targeted towards adults and young children who want to plan persona
  - There are  plenty of useful features that i could add to this application. one obvious improvement would be add logic to send
 
    email reminders if they miss due dates.
+
+## React Component
+
+ - In the project, I used functional component with hooks. The components are provided by below
+
+    - ToDoList :-            which returns individual todolist created by user with delete and edit button functionality
+       
+   - ToDoListCreateForm:-    returns newly created todolist with form
+
+   - ToDoListEditForm:-      returns updated/edited todolist with form
+
+   - ToDoListPage:-          returns all created todolist by different user presenting in one page
+
+   - ToDoListsPage:-         returns search and filter form, used help user filter/search todolists by title or username.
+    
+   - ToDoItem :-            which returns individual todoitem created by user with delete and edit button functionality
+       
+   - ToDoItemCreateForm:-    returns newly created todoitem with form
+
+   - ToDoItemEditForm:-      returns updated/edited todoitem with form
+
+   - ToDoItemPage:-          returns all created todoitem by different user presenting in one page
+
+   - ToDoItemPage:-         returns search and filter form, used help user filter/search todoitem by title or username.
+  
+   - Profile:-               which returns individual avatar with owner name with link functionality
+
+   - ProfilePage:-           returns user name with todolist, todoitem counts in single page
+       
+    
+   
