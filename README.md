@@ -8,10 +8,25 @@ Users of this website will be able to create a list of todoitem that they need t
 
 It also allows assign them due dates and prioritize them so they stay focused on what todoitems most.
 
+It enables cooperative planning, in this case, each user could have their own space with their indvidual todolists and possible
+
+implementing shared todolists.
+
 This site is targeted towards adults and young children who want to plan personal and work schedules.
 
 ![ppp5 landing page](https://github.com/Tamirucode/react-todoitem/assets/116649197/09032e11-1891-48bd-8916-8a30fb8dc131)
 
+## How to use todolist app
+
+    In this version, first the user need to create an account using sign up form.
+
+    Once an account is created, they need to login with their password and username. Afterthat, the user can see top left navbar link
+
+    there is a button addtodolist, then click that button, they will greet with blank forms fill out todolist, next they click create button
+
+    take them a new blank form used for to create todoitem, after they finished fill out form click save and go back to ToDoItem navlink , they need 
+    
+    to open this page to see their created todoitem.
 
 ## Features
 - Navigation
@@ -78,3 +93,9 @@ This site is targeted towards adults and young children who want to plan persona
 
 ![ppp5 ho many todolist](https://github.com/Tamirucode/react-todoitem/assets/116649197/4217e624-31c3-4c7e-ac9f-ed9da2d7843e)
 
+
+## Future Features 
+
+ - There are  plenty of useful features that i could add to this application. one obvious improvement would be add logic to send
+
+   email reminders if they miss due dates.
