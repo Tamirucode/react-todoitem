@@ -145,7 +145,9 @@ This site is targeted towards adults and young children who want to plan persona
 
      - importing Media component:- helps construct repetitive todolist components
 
-     - importing Card component:- is flexible and extensible content container. A wide variety of content, headers, footers and more ... display options
+     - importing Card component:- is flexible and extensible content container.
+
+                                 A wide variety of content, headers, footers and more ... display options
 
      - importing Nav component:- is built using the flexbox to align the navigation items
 
@@ -169,4 +171,86 @@ This site is targeted towards adults and young children who want to plan persona
   
  -  Axios
 
-     - offers me handling HTTP request client and server side   
+     - offers me handling HTTP request client and server side
+
+## Testing
+
+  I have manually tested this project by doing the following
+
+    1. I checked sign in /up features by creating more than 10 users in the site
+
+    2. I checked user can accomplished CRUDE functionality and form has error handling 
+    
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/67f19246-21ea-4c6a-a1e1-b30a6346182e)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/8e5680b2-d736-496d-890f-283de15a0fdf)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/ea90caa2-b1d2-49e6-b7e2-c99d7cdab9b1)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/1cb66bf1-14e8-4a39-87a7-7aceb6f33e3e)
+
+    
+       2.1  A user can created todolist :- Below screen shot
+
+ ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/b81d2c4c-c542-4898-b575-cb22c9e707b2)
+
+
+        2.1  A user can edited todolist :- Below screen shot
+
+ ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/3610fce0-2465-4d1a-9b5c-f7842f04b531)
+
+ ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/24973fe7-c83d-455b-af1b-bf7db5f4b707)
+
+       2.2  A user can delete todolist :- Below screen shot
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/e7594364-7833-400b-a462-7cd9ea77ae2a)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/593e6cba-2004-40ef-912a-3dc7a0e307b9)
+
+       2.3  A user can filter todolist by name or title :- Below screen shot
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/4c41ed6b-4660-4633-9648-e776ae8b4192)
+
+       2.4  A user can create todoitem under specific todolist :- Below screen shot
+
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/19ecf511-74a4-494c-96d1-50d5109362dd)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/45743cac-de47-4a52-8921-956941978a04)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/444bc4fd-856d-46b4-8530-1fb58b65fb20)
+
+      2.5  A user can edit todoitem  :- Below screen shot
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/3ec9eaf4-d1ae-42b9-9118-dd55de687ac5)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/ecb2ae99-b1ee-4166-a97a-a044ba3e4506)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/d6322705-e2c9-4706-b311-276116abf471)
+
+      2.6  A user can delet todoitem  :- Below screen shot
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/0d87f9d1-2d90-4f3e-8bc1-b1b69ca33a95)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/0df13fb0-082a-4b2c-8832-1937aa13446e)
+      
+      
+      2.7  A user can filter todoitem by name or title :- Below screen shot
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/319e9cd6-b297-404c-85f0-6e56491c41eb)
+
+
+      3. the site has been tested in different devices provided below iPad Air
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/ffcfa242-00ee-42b3-8663-0c8bdfe59616)
+
+      4. the site has been tested in different devices provided below iPhone 6/7/8 plus
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/3e2451b1-8abd-4e8b-b0ae-929a924fe539)
+
+      5. the site has been tested in different devices provided below Samsung Galaxy 20/ultra
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/ce98a82a-346d-42bf-bb8b-e15b88f3a31e)
+
+      6. the site has been tested in different devices provided below Samsung iPhone pro 12
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/66087c32-a007-4b4d-ad8f-239fef3abf16)
+
