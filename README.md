@@ -155,3 +155,18 @@ This site is targeted towards adults and young children who want to plan persona
 
      - importing Dropdown component:- are toggleable, contextual overlays for displaying lists of links and more 
     
+ - React Router Dom
+     
+     - routing my web application
+  
+     - handle navigation, define routes and render components based on the current url
+  
+ -  React Dom
+
+     - render components and elements on the web
+  
+     - used create user interfaces and dynamic web application
+  
+ -  Axios
+
+     - offers me handling HTTP request client and server side   
