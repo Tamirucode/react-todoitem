@@ -38,7 +38,7 @@ function ToDoItemCreateForm() {
         const { data } = await axiosReq.get(`/todoitems/${id}/`);
         const { title, is_owner, todolist, description, due_date, priority, completed } = data;
 
-        is_owner ? setToDoItemData({ title }) : history.push("/");
+        is_owner ? setToDoItemData({ title ,todolist, description, due_date, priority, completed }) : history.push("/");
       } catch (err) {
         console.log(err);
       }

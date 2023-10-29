@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/ToDoList.module.css";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card,Media } from "react-bootstrap";
+import { Media } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { useHistory } from "react-router-dom";

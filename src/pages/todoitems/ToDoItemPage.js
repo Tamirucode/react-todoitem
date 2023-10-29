@@ -2,11 +2,10 @@ import React, { useEffect, useState } from "react";
 
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import { Button } from "react-bootstrap";
+
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import ToDoItem from "./ToDoItem";
-import btnStyles from "../../styles/Button.module.css";
 
 function ToDoItemPage() {
   const { id } = useParams();
