@@ -254,3 +254,29 @@ This site is targeted towards adults and young children who want to plan persona
 
 ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/66087c32-a007-4b4d-ad8f-239fef3abf16)
 
+
+
+
+
+
+
+
+
+
+
+
+Deployment
+
+
+I set up initial deployment at the beginning of this project, Here are the steps:
+
+1. Log in to heroku.com and open the dashboard  react-todo2023 application
+
+2.Select the “Deploy” tab in the dashboard
+
+3.Scroll down to the bottom and then select “Deploy Branch”
+
+4.Wait for my build to complete (you can click “view build log” to watch the process in a larger window)
+
+5.When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
+
