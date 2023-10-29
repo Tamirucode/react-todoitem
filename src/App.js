@@ -13,6 +13,8 @@ import ToDoListsPage from "./pages/todolists/ToDoListsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
 import ToDoListEditForm from "./pages/todolists/ToDoListEditForm";
 import ToDoItemEditForm from "./pages/todoitems/ToDoItemEditForm";
+import ProfilePage from "./pages/profiles/ProfilePage";
+
 function App() {
 const currentUser = useCurrentUser();
 const profile_id = currentUser?.profile_id || "";
@@ -47,6 +49,7 @@ const profile_id = currentUser?.profile_id || "";
           <Route exact path="/todoitems/:id" render={() => <ToDoItemPage />} />
           <Route exact path="/todolists/:id/edit" render={() => <ToDoListEditForm />} />
           <Route exact path="/todoitems/:id/edit" render={() => <ToDoItemEditForm />} />
+          <Route exact path="/profiles/:id" render={() => <ProfilePage />} />
           <Route render={() => <p>Page not found!</p>} />
         </Switch>
       </Container>

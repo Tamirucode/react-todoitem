@@ -8,7 +8,7 @@ import appStyles from "../../App.module.css";
 import {
   Form,
   Button,
-  
+ 
   Col,
   Row,
   Container,
@@ -16,7 +16,9 @@ import {
 } from "react-bootstrap";
 import axios from "axios";
 
+
 const SignUpForm = () => {
+  
   const [signUpData, setSignUpData] = useState({
     username: "",
     password1: "",
