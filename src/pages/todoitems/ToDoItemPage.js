@@ -18,7 +18,7 @@ function ToDoItemPage() {
         setToDoItem({ results: [todoitem] });
         console.log(todoitem);
       } catch (err) {
-        console.log(err);
+        //console.log(err);
       }
     };
 

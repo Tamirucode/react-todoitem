@@ -12,10 +12,11 @@ import styles from "../../styles/ToDoListsPage.module.css";
 import { useLocation } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import NoResults from "../../assets/no-results.png";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function ToDoListsPage({ message, filter = "" }) {
   const [todolists, setToDoLists] = useState({ results: [] });
-  
+  const currentUser = useCurrentUser();
   const [hasLoaded, setHasLoaded] = useState(false);
   const { pathname } = useLocation();
   const [query, setQuery] = useState("");
@@ -26,7 +27,7 @@ function ToDoListsPage({ message, filter = "" }) {
         setToDoLists(data);
         setHasLoaded(true);
       } catch (err) {
-        console.log(err);
+        //console.log(err);
       }
     };
 
@@ -38,7 +39,7 @@ function ToDoListsPage({ message, filter = "" }) {
   return () => {
     clearTimeout(timer);
   };
-  }, [filter,query, pathname]);
+  }, [filter,query, pathname, currentUser]);
   
   return (
     <Row className="h-100">

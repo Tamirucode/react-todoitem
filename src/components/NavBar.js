@@ -15,7 +15,6 @@ import useClickOutsideToggle from "../hooks/useClickOutsideToggle";
 const NavBar = () => {
   const currentUser = useCurrentUser();
   const setCurrentUser = useSetCurrentUser();
-
   const { expanded, setExpanded, ref } = useClickOutsideToggle();
 
   const handleSignOut = async () => {
@@ -24,11 +23,11 @@ const NavBar = () => {
       setCurrentUser(null);
       removeTokenTimestamp();
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
-  const addPostIcon = (
+  const addToDoListIcon = (
     <NavLink
       className={styles.NavLink}
       activeClassName={styles.Active}
@@ -38,14 +37,15 @@ const NavBar = () => {
     </NavLink>
   );
 
-  
-   
-  const loggedInIcons = (
+ const loggedInIcons = (
     <>
-      
-      
-        
-      
+      <NavLink
+          className={styles.NavLink}
+          activeClassName={styles.Active}
+              to="/mytodoitem"
+            >
+              <i className=""></i>ToDoItem
+      </NavLink>
       <NavLink className={styles.NavLink} to="/" onClick={handleSignOut}>
         <i className="fas fa-sign-out-alt"></i>Sign out
       </NavLink>
@@ -74,6 +74,7 @@ const NavBar = () => {
       >
         <i className="fas fa-user-plus"></i>Sign up
       </NavLink>
+     
     </>
   );
 
@@ -90,7 +91,7 @@ const NavBar = () => {
             <img src={logo} alt="logo" height="45" />
           </Navbar.Brand>
         </NavLink>
-        {currentUser && addPostIcon } 
+        {currentUser && addToDoListIcon } 
         
         <Navbar.Toggle
           ref={ref}

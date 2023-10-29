@@ -12,9 +12,7 @@ import { useCurrentUser } from "../../contexts/CurrentUserContext";
 
 function ToDoListPage() {
   const { id } = useParams();
-  
   const [todolist, setToDoList] = useState({ results: [] });
-
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
   const [todoitems, setToDoItems] = useState({ results: [] });
@@ -29,7 +27,7 @@ function ToDoListPage() {
         setToDoList({ results: [todolist] });
         setToDoItems(todoitems);
       } catch (err) {
-        console.log(err);
+        //console.log(err);
       }
     };
 

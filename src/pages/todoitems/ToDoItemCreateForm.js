@@ -51,23 +51,19 @@ function ToDoItemCreateForm(props) {
       const { data } = await axiosReq.post("/todoitems/", formData);
       history.push(`/todoitems/${data.id}`);
       
-      
-    } catch (err) {
-      console.log(err);
+      } catch (err) {
+      //console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }
     }
   };
 
-  
-
   const textFields = (
     <div className="text-center">
       <Form.Group>
         <Form.Label>ToDoList</Form.Label>
         <Form.Control
-          
           name="todolist"
           value={todolist}
           placeholder='This is a pk value'

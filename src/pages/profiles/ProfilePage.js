@@ -1,10 +1,8 @@
-
-
-
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Avatar from "../../components/Avatar";
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
+
 const ProfilePage = () => {
   const currentUser = useCurrentUser();
   const profile_image = currentUser?.profile_image;
@@ -23,11 +21,8 @@ return (
               <div>{profile?.todoitem_count}</div>
               <div>ToDoItem</div>
             </Col>
-            
           </Row>
         </Col>
-    
-
     </div>
   )
 }

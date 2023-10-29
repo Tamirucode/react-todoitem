@@ -3,13 +3,12 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
 import Alert from "react-bootstrap/Alert";
-
 import btnStyles from "../../styles/Button.module.css";
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import ListGroup from "react-bootstrap/ListGroup"; 
+
 function ToDoListEditForm() {
   const [errors, setErrors] = useState({});
   const [todolistData, setToDoListData] = useState({
@@ -28,7 +27,7 @@ function ToDoListEditForm() {
 
         owner ? setToDoListData({title}): history.push("/");
       } catch (err) {
-        console.log(err);
+        //console.log(err);
       }
     };
 
@@ -52,7 +51,7 @@ function ToDoListEditForm() {
       await axiosReq.put(`/todolists/${id}/`, formData);
       history.push(`/todolists/${id}`);
     } catch (err) {
-      console.log(err);
+      //console.log(err);
       if (err.response?.status !== 401) {
         setErrors(err.response?.data);
       }

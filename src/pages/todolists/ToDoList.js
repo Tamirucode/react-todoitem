@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../../styles/ToDoList.module.css";
-
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Card, Media} from "react-bootstrap";
+import Card from "react-bootstrap/Card";
+import Media from "react-bootstrap/Media";
 import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
 import { axiosRes } from "../../api/axiosDefaults";
@@ -33,7 +33,7 @@ const ToDoList = (props) => {
       history.goBack();
       
     } catch (err) {
-      console.log(err);
+      //console.log(err);
     }
   };
 
