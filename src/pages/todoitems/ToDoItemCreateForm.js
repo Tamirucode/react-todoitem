@@ -1,21 +1,18 @@
 import React, { useState } from "react";
-
+import Avatar from "../../components/Avatar";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
 import Alert from "react-bootstrap/Alert";
-
 import { ListGroup } from "react-bootstrap";
-
-
 import btnStyles from "../../styles/Button.module.css";
-
 import { useHistory } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
+import { Link } from "react-router-dom";
 
-function ToDoItemCreateForm() {
+function ToDoItemCreateForm(props) {
+  const { profile_image, profile_id , owner} = props;
   const [errors, setErrors] = useState({});
 
   const [todoitemData, setToDoItemData] = useState({
@@ -28,9 +25,7 @@ function ToDoItemCreateForm() {
     
     
   });
-  const { todolist,title,description,due_date,priority,completed } = todoitemData;
-
-  
+  const { todolist, title, description, due_date, priority, completed } = todoitemData;
   const history = useHistory();
 
   const handleChange = (event) => {
@@ -55,6 +50,8 @@ function ToDoItemCreateForm() {
     try {
       const { data } = await axiosReq.post("/todoitems/", formData);
       history.push(`/todoitems/${data.id}`);
+      
+      
     } catch (err) {
       console.log(err);
       if (err.response?.status !== 401) {
@@ -62,6 +59,8 @@ function ToDoItemCreateForm() {
       }
     }
   };
+
+  
 
   const textFields = (
     <div className="text-center">
@@ -71,6 +70,7 @@ function ToDoItemCreateForm() {
           
           name="todolist"
           value={todolist}
+          placeholder='This is a pk value'
           onChange={handleChange}
         />
       </Form.Group>
@@ -106,17 +106,21 @@ function ToDoItemCreateForm() {
       <Form.Group>
         <Form.Label>Due_Date</Form.Label>
         <Form.Control
-          type="date"
+          type="datetime-local"
           name="due_date"
           value={due_date}
           onChange={handleChange}
         />
       </Form.Group>
-      
+      {errors?.due_date?.map((message, idx) => (
+        <Alert variant="warning" key={idx}>
+          {message}
+        </Alert>
+      ))}
       <Form.Group>
         <Form.Label>Priority</Form.Label>
         <Form.Control
-          
+          type="number"
           name="priority"
           value={priority}
           onChange={handleChange}
@@ -131,7 +135,9 @@ function ToDoItemCreateForm() {
         <Form.Label>Completed</Form.Label>
         <Form.Control
           
-          name="completed"
+           type="checkbox"  
+           name="completed"
+           
           value={completed}
           onChange={handleChange}
         />
@@ -156,21 +162,15 @@ function ToDoItemCreateForm() {
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
-      
+          <Link to={`/profiles/${profile_id}`}>
+            <Avatar src={profile_image} />
+            { owner}
+          </Link>
         <Col md={{ span: 5, offset: 4 }}>
           <ListGroup className="mb-3">
           {textFields}
           </ListGroup>
-            
-             
-              
-
-            
-         
         </Col>
-        
-       
-        
       </Row>
     </Form>
   );

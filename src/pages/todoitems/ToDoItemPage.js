@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
-
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-
 import { useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 import ToDoItem from "./ToDoItem";
@@ -30,8 +28,8 @@ function ToDoItemPage() {
   return (
     <Row className="h-100">
       <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Popular profiles for mobile</p>
-        <ToDoItem {...todoitem.results[0]} setToDoItems={setToDoItem} ToDoItemPage />
+       
+        <ToDoItem {...todoitem.results[0]} setToDoItems={setToDoItem} todoitemPage />
         
       </Col>
       

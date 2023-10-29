@@ -1,5 +1,4 @@
-import React, {  useEffect, useState } from "react";
-
+import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -7,35 +6,27 @@ import Col from "react-bootstrap/Col";
 
 import Alert from "react-bootstrap/Alert";
 
-import { ListGroup } from "react-bootstrap";
-
-
 import btnStyles from "../../styles/Button.module.css";
-
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
-
-function ToDoListCreateForm() {
+import ListGroup from "react-bootstrap/ListGroup"; 
+function ToDoListEditForm() {
   const [errors, setErrors] = useState({});
-
   const [todolistData, setToDoListData] = useState({
-    
-    title: ""
-   
-    
+    title: "",
     
   });
   const { title } = todolistData;
-
   const history = useHistory();
   const { id } = useParams();
+
   useEffect(() => {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/todolists/${id}/`);
-        const { title, is_owner} = data;
+        const { owner, title} = data;
 
-        is_owner ? setToDoListData({ title }) : history.push("/");
+        owner ? setToDoListData({title}): history.push("/");
       } catch (err) {
         console.log(err);
       }
@@ -44,7 +35,6 @@ function ToDoListCreateForm() {
     handleMount();
   }, [history, id]);
 
-
   const handleChange = (event) => {
     setToDoListData({
       ...todolistData,
@@ -52,30 +42,26 @@ function ToDoListCreateForm() {
     });
   };
 
-  
+ 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData();
-
-    
     formData.append("title", title);
     
-    try {
-        await axiosReq.put(`/todolists/${id}/`, formData);
-         history.push(`/todolists/${id}`);
-       } catch (err) {
-         console.log(err);
-         if (err.response?.status !== 401) {
-           setErrors(err.response?.data);
-         }
-       }
-     };
-   
+   try {
+      await axiosReq.put(`/todolists/${id}/`, formData);
+      history.push(`/todolists/${id}`);
+    } catch (err) {
+      console.log(err);
+      if (err.response?.status !== 401) {
+        setErrors(err.response?.data);
+      }
+    }
+  };
 
   const textFields = (
     <div className="text-center">
-      
-    <Form.Group>
+      <Form.Group>
         <Form.Label>Title</Form.Label>
         <Form.Control
           type="text"
@@ -89,9 +75,7 @@ function ToDoListCreateForm() {
           {message}
         </Alert>
       ))}
-      
-       
-         
+
       <Button
         className={`${btnStyles.Button} ${btnStyles.Blue}`}
         onClick={() => history.goBack()}
@@ -99,32 +83,22 @@ function ToDoListCreateForm() {
         cancel
       </Button>
       <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        create
+        save
       </Button>
     </div>
   );
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Row>
-      
+       <Row>
         <Col md={{ span: 5, offset: 4 }}>
           <ListGroup className="mb-3">
           {textFields}
           </ListGroup>
-            
-             
-              
-
-            
-         
         </Col>
-        
-       
-        
       </Row>
     </Form>
   );
 }
 
-export default ToDoListCreateForm;
+export default ToDoListEditForm;

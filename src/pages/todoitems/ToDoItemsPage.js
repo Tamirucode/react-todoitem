@@ -1,72 +1,35 @@
-import React, { useEffect, useState } from "react";
 
-import Form from "react-bootstrap/Form";
+
+
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
-import Container from "react-bootstrap/Container";
-
-import ToDoItem from "./ToDoItem";
-import Asset from "../../components/Asset";
-
-import appStyles from "../../App.module.css";
-
-import { useLocation } from "react-router";
-import { axiosReq } from "../../api/axiosDefaults";
-
-import NoResults from "../../assets/no-results.png";
-
-function ToDoItemsPage({ message, filter = "" }) {
-  const [todoitems, setToDoItems] = useState({ results: [] });
+import Avatar from "../../components/Avatar";
+import { useCurrentUser } from "../../contexts/CurrentUserContext";
+const ProfilePage = () => {
+  const currentUser = useCurrentUser();
+  const profile_image = currentUser?.profile_image;
+  const profile =  currentUser
   
-  const [hasLoaded, setHasLoaded] = useState(false);
-  const { pathname } = useLocation();
+return (
+    <div>
+        <Col lg={6}>
+          <h3 className="m-2">{profile?.owner} <Avatar src={profile_image} /></h3>
+          <Row className="justify-content-center no-gutters">
+            <Col xs={3} className="my-2">
+              <div>{profile?.todolist_count}</div>
+              <div>ToDoList</div>
+            </Col>
+            <Col xs={3} className="my-2">
+              <div>{profile?.todoitem_count}</div>
+              <div>ToDoItem</div>
+            </Col>
+            
+          </Row>
+        </Col>
+    
 
-  useEffect(() => {
-    const fetchToDoItems = async () => {
-      try {
-        const { data } = await axiosReq.get(`/todoitems/?${filter}`);
-        setToDoItems(data);
-        setHasLoaded(true);
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    setHasLoaded(false);
-    fetchToDoItems();
-  }, [filter, pathname]);
-  
-  return (
-    <Row className="h-100">
-      <Col className="py-2 p-0 p-lg-2" lg={8}>
-        <p>Popular profiles mobile</p>
-        {hasLoaded ? (
-          <>
-            {todoitems.results.length ? (
-              todoitems.results.map((todoitem) => (
-                <ToDoItem key={todoitem.id} {...todoitem} setToDoLists={setToDoItems} />
-              
-              
-                ))
-           
-            ): (
-              <Container className={appStyles.Content}>
-                <Asset src={NoResults} message={message} />
-              </Container>
-            )}
-
-          </>
-        ) : (
-          <Container className={appStyles.Content}>
-            <Asset spinner />
-          </Container>
-        )}
-      </Col>
-      <Col md={4} className="d-none d-lg-block p-0 p-lg-2">
-        <p>Popular profiles for desktop</p>
-      </Col>
-    </Row>
-  );
+    </div>
+  )
 }
 
-export default ToDoItemsPage;
+export default ProfilePage

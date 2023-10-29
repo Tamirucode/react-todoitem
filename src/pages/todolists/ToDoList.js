@@ -1,23 +1,22 @@
 import React from "react";
 import styles from "../../styles/ToDoList.module.css";
+
 import { useCurrentUser } from "../../contexts/CurrentUserContext";
-import { Media } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Card, Media} from "react-bootstrap";
+import { Link, useHistory } from "react-router-dom";
 import Avatar from "../../components/Avatar";
-import { useHistory } from "react-router-dom";
 import { axiosRes } from "../../api/axiosDefaults";
+import { MoreDropdown } from "../../components/MoreDropdown";
+
 const ToDoList = (props) => {
   const {
     id,
     owner,
     profile_id,
     profile_image,
-    created_at,
     title,
+    created_at,
     
-    
-    
-   todolistPage,
   } = props;
 
   const currentUser = useCurrentUser();
@@ -32,40 +31,35 @@ const ToDoList = (props) => {
     try {
       await axiosRes.delete(`/todolists/${id}/`);
       history.goBack();
+      
     } catch (err) {
       console.log(err);
     }
   };
 
-
   return (
+
+    <Card className={styles.ToDoList}>
     
-      <>
-        <Media className="align-items-center justify-content-between">
+<Media className="align-items-center justify-content-between">
           <Link to={`/profiles/${profile_id}`}>
             <Avatar src={profile_image} height={55} />
             {owner}
           </Link>
-          <div className="d-flex align-items-center">
-            <span>{created_at}</span>
-            {is_owner && todolistPage && "..."}
-          </div>
-        </Media>
-        
-      <ul>
-      <li to={`/todolists/${id}`}>
-      
-        <h3>{title} </h3>
-        <span className={styles.ToDoList} onClick = {handleEdit}> 
-        <i  className="fas fa-edit" /> 
-        </span> <span className={styles.ToDoList} onClick = {handleDelete}>                             
-        <i  className="fas fa-trash-alt" />
-                                        </span> </li>
-     
-      <Link to="/todoitems"> Add todoitem</Link>
-      </ul>
-      </>
-      
+         
+          <h5>{title}</h5> 
+        <div className="d-flex align-items-center">
+          <span>{created_at}</span>
+          {is_owner && (
+              <MoreDropdown
+                handleEdit={handleEdit}
+                handleDelete={handleDelete}
+              />
+            )}
+            
+        </div> 
+      </Media>
+    </Card>
   );
 };
 

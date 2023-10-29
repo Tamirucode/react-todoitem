@@ -1,21 +1,15 @@
 import React, {  useEffect, useState } from "react";
-
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
 import Alert from "react-bootstrap/Alert";
-
 import { ListGroup } from "react-bootstrap";
-
-
 import btnStyles from "../../styles/Button.module.css";
-
 import { useHistory, useParams } from "react-router";
 import { axiosReq } from "../../api/axiosDefaults";
 
-function ToDoItemCreateForm() {
+function ToDoItemEditForm() {
   const [errors, setErrors] = useState({});
 
   const [todoitemData, setToDoItemData] = useState({
@@ -36,9 +30,9 @@ function ToDoItemCreateForm() {
     const handleMount = async () => {
       try {
         const { data } = await axiosReq.get(`/todoitems/${id}/`);
-        const { title, is_owner, todolist, description, due_date, priority, completed } = data;
+        const {  is_owner, todolist, title, description, due_date, priority, completed } = data;
 
-        is_owner ? setToDoItemData({ title ,todolist, description, due_date, priority, completed }) : history.push("/");
+        is_owner ? setToDoItemData({todolist, title, description, due_date, priority, completed }) : history.push("/");
       } catch (err) {
         console.log(err);
       }
@@ -87,6 +81,7 @@ function ToDoItemCreateForm() {
           
           name="todolist"
           value={todolist}
+          placeholder='This is a pk value'
           onChange={handleChange}
         />
       </Form.Group>
@@ -122,7 +117,7 @@ function ToDoItemCreateForm() {
       <Form.Group>
         <Form.Label>Due_Date</Form.Label>
         <Form.Control
-          type="date"
+          type="datetime-local"
           name="due_date"
           value={due_date}
           onChange={handleChange}
@@ -132,7 +127,7 @@ function ToDoItemCreateForm() {
       <Form.Group>
         <Form.Label>Priority</Form.Label>
         <Form.Control
-          
+          type="number"
           name="priority"
           value={priority}
           onChange={handleChange}
@@ -146,7 +141,7 @@ function ToDoItemCreateForm() {
       <Form.Group>
         <Form.Label>Completed</Form.Label>
         <Form.Control
-          
+          type="checkbox"
           name="completed"
           value={completed}
           onChange={handleChange}
@@ -164,7 +159,7 @@ function ToDoItemCreateForm() {
         cancel
       </Button>
       <Button className={`${btnStyles.Button} ${btnStyles.Blue}`} type="submit">
-        create
+        save
       </Button>
     </div>
   );
@@ -172,24 +167,14 @@ function ToDoItemCreateForm() {
   return (
     <Form onSubmit={handleSubmit}>
       <Row>
-      
         <Col md={{ span: 5, offset: 4 }}>
           <ListGroup className="mb-3">
           {textFields}
           </ListGroup>
-            
-             
-              
-
-            
-         
         </Col>
-        
-       
-        
       </Row>
     </Form>
   );
 }
 
-export default ToDoItemCreateForm;
+export default ToDoItemEditForm;
