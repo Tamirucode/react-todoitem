@@ -28,8 +28,95 @@ This site is targeted towards adults and young children who want to plan persona
    
     to open this page to see their created todoitem.
 
+## User Story
+       
+  - Navigation
+          
+    - As a user I can view a navbar from every page sothat I can navigate easily between pages.
+
+    - As logged out user I can see sign in and sign up options sothat I can sign in/sign up.
+
+  - Authetication
+
+    - As a user I can sign in to the app sothat I can access functionality for logged in users.
+
+    - As a user I can maintain my logged-in status until I choose to logout sothat my user experience is not compromised.
+
+    - As a user I can create a new account sothat I can access all the features for signed up users.
+   
+    - As a user I can tell if I am logged in or not sothat I can login if I need to.
+   
+  - Routing
+
+     - As a user I can navigate through pages quickly sothat I can view content seamlessly without page refresh.
+   
+  - Avatar
+
+     - As a user I can view users avatars sothat I can easily identify users of the application.
+   
+  - User profile
+
+     - As a user I can view statistics about a specific user todolists and todoitems sothat I can learn more about them.
+   
+     - As a user I can view others profile sothat I can see their todolists, todoitem and learn more about them.
+
+  - Edit Profile
+
+     - As a logged in user I can edit my profile sothat I can change my profile image.
+
+  - Update username and password
+
+     - As a logged in user I can update my username and password sothat I can change my display name and keep my profile secure.
+   
+  - Create todolist
+
+     - As a logged in user I can create todolists sothat I can share my todolists with the world.
+   
+  - View a todolist
+
+     - As a user I can view the details of a single todolist sothat I can learn more about it. 
+  
+  - Create todoitem
+
+     - As a logged in user I can create todoitems sothat I can share my todoitem with the world.
+   
+  - View todoitem
+
+     - As a user I can view the details of a single todoitem sothat I can learn more about it.
+
+  - View todoitem by due_date
+
+    - As a user I can view all the most recent todoitems by due_date sothat I can notice when specific task should be finalized.
+
+  - Search /filter todolist, todoitem
+
+    - As a user I can search /filter for todolist, todoitem by key words, owner sothat I can find most interesting user
+
+      profile/view specific user intended to accomplish.
+ 
+ - Delete todolist
+
+    - As a todolist owner I can delete my todolist title sothat I can remove it from the app.
+  
+ - Edit todolist
+
+    - As a todolist owner I can edit my todolist title sothat I can make corrections or update my todolist after it was created.
+
+ - Edit todoitem
+
+    - As a todoitem owner I can edit my todoitem so that I can fix or update my existing todoitem.
+  
+ - Delete todoitem
+
+    - As an owner of a todoitem I can delete my todoitem sothat I can manage/control todoitem.
+ 
+ - View todoitem by completion
+  
+    - As a logged in user I can view todoitems completed sothat I can distingush between completed and those still need action.
+
 ## Features
-- Navigation
+
+ - Navigation
     
     - featured at the top of the page, the navigation shows the todo name logo in the left corner: next to that Add todolist that
       links to the form to add todolists if logged in users
@@ -172,6 +259,14 @@ This site is targeted towards adults and young children who want to plan persona
  -  Axios
 
      - offers me handling HTTP request client and server side
+ 
+ -  Mock Service Worker
+
+     - an Api mocking tool that lets you mock by intercepting requests on the network level
+  
+ -  JWT (JSON Web Token)
+
+     - securely transmitting information  between parties as a JSON object
 
 ## Testing
 
@@ -250,33 +345,86 @@ This site is targeted towards adults and young children who want to plan persona
 
 ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/ce98a82a-346d-42bf-bb8b-e15b88f3a31e)
 
-      6. the site has been tested in different devices provided below Samsung iPhone pro 12
+      6. the site has been tested in different devices provided below Samsung iPhone 12  Pro
 
 ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/66087c32-a007-4b4d-ad8f-239fef3abf16)
 
+## Validator Testing 
+
+ - Passed the css code through W3C and cofirmed there are no problems
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/1c5dc69f-07f8-4d3f-b6c4-4fa39d9d926c)
+
+ - No significant errors were returned from JSLint
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/1f8c3e20-2988-4bf4-859a-fba74da29b2a)
 
 
+ - Significant info and a few errors were returned from W3C HTML Checker especially react index.html file
+
+## Bugs
+
+ ### solved bugs
+ 
+   - when I tested the project, I was getting module not found error because I had forgotten that the module isn't imported properly.
+
+     I fixed this by importing the module appropriately 
+
+ ### Remaining bugs
+
+   - After  deployment i have noticed that todoitem pk value not automatically inserted when the user created todolist
+
+   - After a user delete todoitem "due" and avatar remain there
+  
+       
 
 
+## Technologies
+
+   - HTML, CSS, JavaScript
+   
+   - React.js
+   
+   - Bootstrap.js
+   
+   - Django REST Framework
+
+## Deployment
 
 
+   - I set up initial deployment at the beginning of this project, Here are the steps:
 
+     1. My app react-todo2023 is created in Heroku, let's
 
+     2. then connect it to my Github repository (react-todoitem).  
 
+     3. From the “Deploy” tab, I click on “Github”  in the “Deployment method” section,  
 
+     4. I enter the name of the repository I  just created, and then click “Connect”.
+      
+     5. At last, I can click “deploy  branch” which will trigger Heroku to deploy
+    
+     6. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
 
-Deployment
-
-
-I set up initial deployment at the beginning of this project, Here are the steps:
+   - Final Deployment steps
 
 1. Log in to heroku.com and open the dashboard  react-todo2023 application
 
-2.Select the “Deploy” tab in the dashboard
+2. Select the “Deploy” tab in the dashboard
 
-3.Scroll down to the bottom and then select “Deploy Branch”
+3. Scroll down to the bottom and then select “Deploy Branch”
 
-4.Wait for my build to complete (you can click “view build log” to watch the process in a larger window)
+4. Wait for my build to complete (you can click “view build log” to watch the process in a larger window)
 
-5.When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
+5. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
 
+
+## Credits
+
+  ##### Content
+
+   - The code to make the layout was taken the moment walk through project
+
+   - The logo in the top left Navlink was taken free web source
+
+   - Fronted Libraries explanation referenced from ReactBootstrap docmentation
