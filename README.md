@@ -14,6 +14,8 @@ indvidual todolists and possible implementing shared todolists.
 
 This site is targeted towards adults and young children who want to plan personal and work schedules.
 
+![mockup](https://ui.dev/amiresponsive?url=https://drf-todo2023-76af1f9fdada.herokuapp.com/)
+
 ![ppp5 landing page](https://github.com/Tamirucode/react-todoitem/assets/116649197/09032e11-1891-48bd-8916-8a30fb8dc131)
 
 ## How to use todolist app
@@ -189,7 +191,7 @@ This site is targeted towards adults and young children who want to plan persona
 
 ## React Component
 
- - In the project, I used functional component with hooks. The components are provided by below
+ - In this project, I used functional component with hooks. The components are provided by below
 
     - ToDoList :-            which returns individual todolist created by user with delete and edit button functionality
        
@@ -209,7 +211,7 @@ This site is targeted towards adults and young children who want to plan persona
 
    - ToDoItemPage:-          returns all created todoitem by different user presenting in one page
 
-   - ToDoItemPage:-         returns search and filter form, used help user filter/search todoitem by title or username.
+   - ToDoItemsPage:-         returns search and filter form, used help user filter/search todoitem by title or username.
   
    - Profile:-               which returns individual avatar with owner name with link functionality
 
@@ -350,6 +352,10 @@ This site is targeted towards adults and young children who want to plan persona
 ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/66087c32-a007-4b4d-ad8f-239fef3abf16)
 
 ## Validator Testing 
+
+- Lighthouse report 
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/65bc8f91-0416-49b4-9cd3-2bf69217ad34)
 
  - Passed the css code through W3C and cofirmed there are no problems
 
@@ -512,7 +518,7 @@ This site is targeted towards adults and young children who want to plan persona
 
             npm start
 
-       8.3 I open port 3000 or 8080 to see my React app and checked that the functionality all works
+       8.3 I open port 3000 or 8000 to see my React app and checked that the functionality all works
 
        8.4 Git add,  git commit  and git push changes sofar
 
@@ -660,13 +666,15 @@ This site is targeted towards adults and young children who want to plan persona
 
    - Fronted Libraries explanation referenced from
 
-     - [ReactBootstrap docmentation](https://react-bootstrap-v4.netlify.app/components/forms/)
+     - [ReactBootstrap documentation](https://react-bootstrap-v4.netlify.app/components/forms/)
     
      - [Wikipedia](https://en.wikipedia.org/wiki/React_(software))
 
-   - The text for the Home page I created, but modified and polished by fellow student
+   - The text for the Home page I created and modified, finally polished by fellow student
    
-   - The icons in the navlink were taken from Font Awesome
+   - The icons in the navlink were taken from [Font Awesome](https://fontawesome.com/)
    
-   - The instructions deployment steps were taken from moments walk through project
+   - The instructions deployment steps were taken from
+
+      - [moments walk through project](https://code-institute-students.github.io/advfe-unified-workspace/combining-workspaces/00-combining-workspaces)
 
