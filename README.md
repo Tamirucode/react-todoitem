@@ -8,9 +8,9 @@ Users of this website will be able to create a list of todoitem that they need t
 
 It also allows assign them due dates and prioritize them so they stay focused on what todoitems most.
 
-It enables cooperative planning, in this case, each user could have their own space with their indvidual todolists and possible
+It enables cooperative planning, in this case, each user could have their own space with their 
 
-implementing shared todolists.
+indvidual todolists and possible implementing shared todolists.
 
 This site is targeted towards adults and young children who want to plan personal and work schedules.
 
@@ -654,8 +654,19 @@ This site is targeted towards adults and young children who want to plan persona
 
   ##### Content
 
-   - The code to make the layout was taken the moment walk through project
+   - The code to make the layout was taken from the moment walk through project
 
    - The logo in the top left Navlink was taken free web source
 
-   - Fronted Libraries explanation referenced from ReactBootstrap docmentation
+   - Fronted Libraries explanation referenced from
+
+     - [ReactBootstrap docmentation](https://react-bootstrap-v4.netlify.app/components/forms/)
+    
+     - [Wikipedia](https://en.wikipedia.org/wiki/React_(software))
+
+   - The text for the Home page I created, but modified and polished by fellow student
+   
+   - The icons in the navlink were taken from Font Awesome
+   
+   - The instructions deployment steps were taken from moments walk through project
+
