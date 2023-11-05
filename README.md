@@ -397,48 +397,48 @@ This site is targeted towards adults and young children who want to plan persona
 
    - I set up initial deployment of this project, Here are the steps:
 
-     1. My app react-todo2023 is created in Heroku, let's
+     1.  My app react-todo2023 is created in Heroku, let's
 
-     2. then connect it to my Github repository (react-todoitem).  
+     2.  then connect it to my Github repository (react-todoitem).  
 
-     3. From the “Deploy” tab, I click on “Github”  in the “Deployment method” section,  
+     3.  From the “Deploy” tab, I click on “Github”  in the “Deployment method” section,  
 
-     4. I enter the name of the repository I  just created, and then click “Connect”.
+     4.  I enter the name of the repository I  just created, and then click “Connect”.
       
-     5. At last, I can click “deploy  branch” which will trigger Heroku to deploy
+     5.  At last, I can click “deploy  branch” which will trigger Heroku to deploy
     
-     6. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
+     6.  When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
 
    - React App Deployment steps
 
-1. Log in to heroku.com and open the dashboard  react-todo2023 application
+1.  Log in to heroku.com and open the dashboard  react-todo2023 application
 
-2. Select the “Deploy” tab in the dashboard
+2.  Select the “Deploy” tab in the dashboard
 
-3. Scroll down to the bottom and then select “Deploy Branch”
+3.  Scroll down to the bottom and then select “Deploy Branch”
 
-4. Wait for my build to complete (you can click “view build log” to watch the process in a larger window)
+4.  Wait for my build to complete (you can click “view build log” to watch the process in a larger window)
 
-5. When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
+5.  When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
 
 
 ## Deployment  Combined Frontend and Backend
 
   - Adding the React files to the DRF project
 
-     1.Go to the GitHub repository for your React project
+     1.  Go to the GitHub repository for my React project
 
-     2.Click the “Code” button, select the HTTPS tab, and copy the URL provided
+     2.  Click the “Code” button, select the HTTPS tab, and copy the URL provided
 
-     3.Open the workspace for your DRF project
+     3.  Open the workspace for your DRF project
 
-     4.open the terminal window and type the below command
+     4.  open the terminal window and type the below command
 
         git clone <react_repo_url> frontend
 
-        This will create a new folder in your DRF workspace called frontend that contains all the files from your React project.
+        This will create a new folder in my DRF workspace called frontend that contains all the files from my React project.
 
-     5.1 Removing unnecessary files
+  - Removing unnecessary files
 
         5.1  In the terminal window, change directory to the frontend folder with the following command
 
@@ -448,69 +448,71 @@ This site is targeted towards adults and young children who want to plan persona
 
                    rm -rf .git .gitignore README.md
 
-        5.3 Install the npm packages required for developing with React using the following command
+        5.3  Install the npm packages required for developing with React using the following command
 
                    npm install
 
-        5.4  Move back to the root directory of your project with the following command
+        5.4  Move back to the root directory of my project with the following command
 
                     cd ..
 
         5.5  git add,  git commit  and git push changes sofar
 
-    6. Changes to the React project
+ - Changes to the React project
 
         6.1  Open the package.json file in the frontend directory, and at the bottom of the file, add a new key to the JSON object.
 
-             This will allow the preview to run within your development environment
+             This will allow the preview to run within my development environment
 
-              "proxy": "http://localhost:8000/"
+              "proxy": "https://8000-tamirucode-drfapishare-ik5cad6fhe7.ws-eu105.gitpod.io/"
 
-        6.2 Open the axiosDefaults.js file and comment out the baseURL setting
+        6.2  Open the axiosDefaults.js file and comment out the baseURL setting
 
-        6.3 git add,  git commit  and git push changes sofar
+        6.3  git add,  git commit  and git push changes sofar
 
-    7. Preparing the Django API for development
+ - Preparing the Django API for development
    
-        7.1 In your env.py file, make the following changes:
+        7.1  In my env.py file, make the following changes:
 
-           7.1.1 Comment out the DEV environment variable. This ensures that the application will respond with JSON
+           7.1.1  Comment out the DEV environment variable. This ensures that the application will respond with JSON
 
-           7.1.2 Remove the CLIENT_ORIGIN_DEV environment variable, if you have it
+           7.1.2  Remove the CLIENT_ORIGIN_DEV environment variable, if i have it
 
-           7.1.3 Add a new key DEBUG with a value of ‘1’
+           7.1.3  Add a new key DEBUG with a value of ‘1’
 
-           7.1.4 Add a new key ALLOWED_HOST with the value of your development environment URL, wrapped in quotes
+           7.1.4  Add a new key ALLOWED_HOST with the value of my development environment URL, wrapped in quotes
 
-            - Ensure you remove the https:// from the beginning, and the trailing slash / from the end of the development environment URL.
+            - Ensure I remove the https:// from the beginning, and the trailing slash / from the end of the development environment URL.
 
-           7.1.5 Add a new key CLIENT_ORIGIN with the value of your development environment URL, wrapped in quotes
+           7.1.5  Add a new key CLIENT_ORIGIN with the value of my development environment URL, wrapped in quotes
 
             - This string should include the https:// at the beginning, but the trailing slash / should be removed.
 
-           7.1.6 Ensure you have a key for DATABASE_URL set to the value of your ElephantSQL database URL
+           7.1.6  Ensure I have a key for DATABASE_URL set to the value of my ElephantSQL database URL
 
-           7.1.7 Ensure you have a key for CLOUDINARY_URL set to the value of your Cloudinary URL
+           7.1.7  Ensure I have a key for CLOUDINARY_URL set to the value of your Cloudinary URL
 
-       7.2 Updating settings.py
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/ae7a4293-b142-4b3f-a597-986f8b4891ab)
 
-           7.2.1 Set DEBUG to the value of the DEBUG environment variable and update ALLOWED_HOSTS to include
+       7.2  Updating settings.py
+
+           7.2.1  Set DEBUG to the value of the DEBUG environment variable and update ALLOWED_HOSTS to include
 
                   the ALLOWED_HOST environment variable added to your env.py file
 
-           7.2.2 In your settings.py file remove the line containing the import re
+           7.2.2  In my settings.py file remove the line containing the import re
 
-           7.2.3 Remove all the CORS code, leaving only the CORS_ALLOWED_ORIGINS list
+           7.2.3  Remove all the CORS code, leaving only the CORS_ALLOWED_ORIGINS list
 
-    8. Open two terminals, side by side
+- Open two terminals, side by side
 
-       8.1 First should be in the root directory where the Django API will run. From here, type the command to run the Django API
+       8.1  First should be in the root directory where the Django API will run. From here, type the command to run the Django API
 
             python3 manage.py runserver
 
 ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/fd0a9f61-c9fd-462d-aaeb-0b04a60a019b)
 
-       8.2 Second should be in the frontend directory. To enter that directory from the root, type the following command
+       8.2  Second should be in the frontend directory. To enter that directory from the root, type the following command
 
             cd frontend
 
@@ -518,83 +520,83 @@ This site is targeted towards adults and young children who want to plan persona
 
             npm start
 
-       8.3 I open port 3000 or 8000 to see my React app and checked that the functionality all works
+       8.3  I open port 3000 or 8000 to see my React app and checked that the functionality all works
 
-       8.4 Git add,  git commit  and git push changes sofar
+       8.4  Git add,  git commit  and git push changes sofar
 
 ## Deployment of both applications
 
-   1.Setting up WhiteNoise for static files: In the terminal
+   1. Setting up WhiteNoise for static files: In the terminal
 
-       1.1 Ensure your terminal location is in the root directory, then install whitenoise with the following command
+       1.1  Ensure my terminal location is in the root directory, then install whitenoise with the following command
 
             pip3 install whitenoise==6.4.0
 
-       1.2 Add this dependency to your requirements.txt file with the following command
+       1.2  Add this dependency to my requirements.txt file with the following command
 
            pip3 freeze > requirements.txt
 
-       1.3 Create a new empty folder called staticfiles in the root directly with the following command
+       1.3  Create a new empty folder called staticfiles in the root directly with the following command
 
            mkdir staticfiles
 
-    2. Setting.py
+   2. Setting.py
 
-        2.1 In the INSTALLED_APPS list, ensure that the ‘cloudinary_storage’ app name is below ‘django.contrib.staticfiles’. 
+        2.1  In the INSTALLED_APPS list, ensure that the ‘cloudinary_storage’ app name is below ‘django.contrib.staticfiles’. 
         
             This ensures that Cloudinary will not attempt to intervene with staticfiles, and 
             
             allows whitenoise to become the primary package responsible for static files
 
-        2.2 In the MIDDLEWARE list, add WhiteNoise below the SecurityMiddleware and above the SessionMiddleware
+        2.2  In the MIDDLEWARE list, add WhiteNoise below the SecurityMiddleware and above the SessionMiddleware
 
            'whitenoise.middleware.WhiteNoiseMiddleware', 
 
-        2.3 In the TEMPLATES list at the DIRS key, add the following code to the DIRS list, to tell Django and 
+        2.3  In the TEMPLATES list at the DIRS key, add the following code to the DIRS list, to tell Django and 
         
              WhiteNoise where to look for Reacts index.html file in deployment os.path.join(BASE_DIR, 'staticfiles', 'build')
 
-        2.4 In the static files section, add the STATIC_ROOT and WHITENOISE_ROOT variables and values to tell Django and WhiteNoise
+        2.4  In the static files section, add the STATIC_ROOT and WHITENOISE_ROOT variables and values to tell Django and WhiteNoise
          
              where to look for the admin static files and Reacts static files during deployment
 
-     3.In the urls.py file of your Django Rest Framework application:
+   3. In the urls.py file of my Django Rest Framework application:
 
-             3.1 Remove the root_route view from the .views imports
+             3.1  Remove the root_route view from the .views imports
 
-             3.2 Import the TemplateView from the generic Django views from django.views.generic import TemplateView
+             3.2  Import the TemplateView from the generic Django views from django.views.generic import TemplateView
 
-             3.3 In the url_patterns list, remove the root_route code and replace it with the TemplateView pointing to the index.html file
+             3.3  In the url_patterns list, remove the root_route code and replace it with the TemplateView pointing to the index.html file
 
                  path('', TemplateView.as_view(template_name='index.html')),
 
-             3.4 At the bottom of the file, add the 404 handler to allow React to handle 404 errors
+             3.4  At the bottom of the file, add the 404 handler to allow React to handle 404 errors
 
                  handler404 = TemplateView.as_view(template_name='index.html')
 
-             3.5 Add api/ to the beginning of all the API URLs, excluding the path for the home page and admin panel
+             3.5  Add api/ to the beginning of all the API URLs, excluding the path for the home page and admin panel
 
  ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/83c731d9-807f-4eb3-948a-95955b13993d)
 
-     4. In axiosDefault.js:
+   4.  In axiosDefault.js:
 
-             4.1 Now that we have changed the base path for the API route, we need to prepend all API requests in our react application with /api. 
+             4.1  Now that we have changed the base path for the API route, we need to prepend all API requests in our react application with /api. 
                
                   Open the axiosDefaults.js file, comment back in the axios.defaults.baseURL and set it to "/api"
      
-     5. Git add,  git commit  and git push changes sofar
+   5.  Git add,  git commit  and git push changes sofar
 
-     6. Compiling the static files
+   6.  Compiling the static files
 
-             6.1 Collect the admin and DRF staticfiles to the empty staticfiles directory you created earlier, with the following command in the terminal
+             6.1  Collect the admin and DRF staticfiles to the empty staticfiles directory I created earlier, with the following command in the terminal
 
                     python3 manage.py collectstatic
 
-             6.2 Next, we will compile the React application and move its files to the staticfiles folder. In another terminal, cd into the frontend directory
+             6.2  Next, we will compile the React application and move its files to the staticfiles folder. In another terminal, cd into the frontend directory
 
                     cd frontend
 
-             6.3 Then run the command to compile and move the React files
+             6.3  Then run the command to compile and move the React files
 
                     npm run build && mv build ../staticfiles/.
 
@@ -604,53 +606,53 @@ This site is targeted towards adults and young children who want to plan persona
 
                      This command will delete the old folder and replace it with the new one: npm run build && rm -rf ../staticfiles/build && mv build ../staticfiles/.
 
-              6.4 Now your staticfiles folder should be filled with all the static files needed for deployment
+              6.4  Now your staticfiles folder should be filled with all the static files needed for deployment
 
    ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/61a038e9-d9f1-4c23-82b0-323cb4c5ac11)
    
-      7. Adding a runtime.txt file
+   7. Adding a runtime.txt file
 
-              7.1 In the root directory of your project, create a new file named runtime.txt
+              7.1  In the root directory of your project, create a new file named runtime.txt
 
-              7.2 Inside the runtime.txt, add the following line:
+              7.2  Inside the runtime.txt, add the following line:
 
                    python-3.9.16
 
-       8. Testing the Build
+   8. Testing the Build
 
-              8.1 Ensure all running servers are terminated. In any running terminals press Ctrl+C#
+              8.1  Ensure all running servers are terminated. In any running terminals press Ctrl+C#
 
-              8.2 In your env.py file, ensure that both the DEBUG and DEV environment variables are commented out
+              8.2  In my env.py file, ensure that both the DEBUG and DEV environment variables are commented out
 
-              8.3 Run the Django server, in the terminal type
+              8.3  Run the Django server, in the terminal type
 
                    python3 manage.py runserver
 
-              8.4 open the preview on port 8000 to check that your application is running, it works
+              8.4  open the preview on port 8000 to check that your application is running, it works
 
-              8.5 Git add,  git commit  and git push changes sofar
+              8.5  Git add,  git commit  and git push changes sofar
 
-      9. Preparing your existing Heroku app for deployment
+   9. Preparing my existing Heroku app for deployment
 
-              9.1 Log into your Heroku account and access the dashboard for your DRF application
+              9.1  Log into my Heroku account and access the dashboard for my DRF application
 
-              9.2 Go to Settings and open the Config Vars
+              9.2  Go to Settings and open the Config Vars
 
-              9.3 Add ALLOWED_HOST key, set to the URL of my combined project,
+              9.3  Add ALLOWED_HOST key, set to the URL of my combined project,
 
                - I removed the https:// from the beginning, and the trailing slash / from the end URL.
 
-              9.4 Add CLIENT_ORIGIN key, set to the URL of my combined project,
+              9.4  Add CLIENT_ORIGIN key, set to the URL of my combined project,
 
                - This string should include the https:// at the beginning, but the trailing slash / should be removed.
 
-              9.5 Git add, git commit  and git push changes sofar
+              9.5  Git add, git commit  and git push changes sofar
 
-              9.6 Select the “Deploy” tab in the dashboard
+              9.6  Select the “Deploy” tab in the dashboard
 
-              9.7 Scroll down to the bottom and then select “Deploy Branch”
+              9.7  Scroll down to the bottom and then select “Deploy Branch”
 
-              9.8 Wait for my build to complete (you can click “view build log” to watch the process in a larger window)
+              9.8  Wait for my build to complete (I can click “view build log” to watch the process in a larger window)
 
               9.9  When you see the message “deployed to Heroku” in the build log, click the “open app” button at the top of the page.
 
