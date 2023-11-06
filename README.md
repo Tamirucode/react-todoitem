@@ -662,7 +662,9 @@ This site is targeted towards adults and young children who want to plan persona
 
   ##### Content
 
-   - The code to make the layout was taken from the moment walk through project
+   - Code
+      
+     - moment walk through project
 
    - The logo in the top left Navlink was taken free web source
 
