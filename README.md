@@ -187,7 +187,7 @@ This site is targeted towards adults and young children who want to plan persona
 
  - There are  plenty of useful features that i could add to this application. one obvious improvement would be add logic to send
 
-   email reminders if they miss due dates.
+   email reminders if user miss due dates.
 
 ## React Component
 
@@ -213,10 +213,11 @@ This site is targeted towards adults and young children who want to plan persona
 
    - ToDoItemsPage:-         returns search and filter form, used help user filter/search todoitem by title or username.
   
-   - Profile:-               which returns individual avatar with owner name with link functionality
-
    - ProfilePage:-           returns user name with todolist, todoitem counts in single page
-       
+
+   - SignInForm:-           use user information inorder to authenticate their access 
+   
+   - SignUpForm:-           user registration to access the site
     
 ## Fronted Libraries
 
