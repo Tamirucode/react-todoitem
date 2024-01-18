@@ -311,24 +311,26 @@ This site is targeted towards adults and young children who want to plan persona
        2.4  A user can create todoitem under specific todolist :- Below screen shot
 
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/19ecf511-74a4-494c-96d1-50d5109362dd)
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/45743cac-de47-4a52-8921-956941978a04)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/22962d0b-4015-4b64-9d31-9f261a6a44eb)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/9619d468-829b-416b-b216-fe0c23fadf8f)
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/444bc4fd-856d-46b4-8530-1fb58b65fb20)
 
       2.5  A user can edit todoitem  :- Below screen shot
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/3ec9eaf4-d1ae-42b9-9118-dd55de687ac5)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/152913b0-a04f-419e-bf2f-e9a008d251b5)
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/ecb2ae99-b1ee-4166-a97a-a044ba3e4506)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/a8327cfc-7a29-4e4a-87ab-20775391cf21)
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/d6322705-e2c9-4706-b311-276116abf471)
 
       2.6  A user can delet todoitem  :- Below screen shot
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/0d87f9d1-2d90-4f3e-8bc1-b1b69ca33a95)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/8e0d46de-13a1-481d-983a-252c97d377ed)
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/0df13fb0-082a-4b2c-8832-1937aa13446e)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/3f6ab824-b71e-4133-b73b-4771b82bf574)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/71f3bcf9-202e-490b-a8da-0f38504616ba)
+
+
       
       
       2.7  A user can filter todoitem by name or title :- Below screen shot
