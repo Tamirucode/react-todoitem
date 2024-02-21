@@ -143,7 +143,7 @@ This site is targeted towards adults and young children who want to plan persona
 ![ppp5 home](https://github.com/Tamirucode/react-todoitem/assets/116649197/fb0e85e0-2574-478e-a36e-e90c65cde0ff)
 
     
-   - Below image shows logged-in user home page todolist and date created .
+   - Below image shows logged-in user home page todolist and date created
 
 ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/03edad64-0288-442f-9f24-a32e197d9eb0)
 
@@ -171,24 +171,15 @@ This site is targeted towards adults and young children who want to plan persona
  
 ![sign in  form](https://github.com/Tamirucode/react-todoitem/assets/116649197/f67fe527-1a8a-4cc5-b44f-0b1dfdde5df6)
 
-- The ToDoItem Section
-
-    - The ToDoItem section gives list of users name and their respective todoitem
-
-    - This section shows todoitem and date created by users.
- 
-![ppp5 todoitem](https://github.com/Tamirucode/react-todoitem/assets/116649197/b5731ba3-27fb-4ed1-b107-e44fd5c25ce7)
-
-- The todoitem section includes search bar to users can find specific todoitem title or filter todoitem by username
-
-![ppp5 filter  management](https://github.com/Tamirucode/react-todoitem/assets/116649197/5b89ff58-4d52-4ad2-9222-2327bf6c8db4)
-
 
 - The The Profile Section
 
     - The profile section shows how many to todolists and todoitems are created by user
+ 
+    - This section shows ToDoItems and their respective todoitempriorities
 
-![ppp5 ho many todolist](https://github.com/Tamirucode/react-todoitem/assets/116649197/4217e624-31c3-4c7e-ac9f-ed9da2d7843e)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/5ee9ae7d-f11a-4dc4-8d91-1b08cf5c2439)
+
 
 
 ## Future Features 
@@ -365,6 +356,45 @@ This site is targeted towards adults and young children who want to plan persona
 ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/05cf53cb-f905-476c-8bc8-45e3dd95b350)
 
 ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/10d5e69c-63dc-4f13-8552-a0587dc483bb)
+
+      2.10  A user can change image :- Below screen shot 
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/fb843abc-fb45-4f6f-acbc-aa0fa27e0732)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/3e471b48-7592-4bbb-90aa-7dbdfddde076)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/18cc773e-5c46-4a2d-a3e8-b5cbc7168ac9)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/cdbde84e-4ad8-4b8f-9b0a-0547deb6059b)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/abf7b021-211c-477b-bd26-26d1704002bf)
+
+
+
+    2.11  A user can edit username :- Below screen shot 
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/d0dfa86c-fd33-4ba0-bb2f-127ac9a83552)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/8640a754-a20c-48b0-9366-8f536d461346)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/f8f3c792-9a4f-4602-90e0-5c801fd369d1)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/bb36ca60-12f3-4a01-8a29-df5b1818ded1)
+
+
+
+      2.12  A user can change password :- Below screen shot 
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/8f27aa40-375b-489d-84d3-086338f66bb2)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/74742b01-1ba7-43c5-93d0-c7c72472ec9e)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/1eda8bc9-15d6-424b-964b-016a2b660ba8)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/d138461c-3281-4b01-8341-849ed836100a)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/14f3382d-7851-4117-9d2e-fa245dff68f6)
+
+
 
 
 
