@@ -16,7 +16,8 @@ This site is targeted towards adults and young children who want to plan persona
 
 ![mockup](https://ui.dev/amiresponsive?url=https://drf-todo2023-76af1f9fdada.herokuapp.com/)
 
-![ppp5 landing page](https://github.com/Tamirucode/react-todoitem/assets/116649197/09032e11-1891-48bd-8916-8a30fb8dc131)
+![ppp5 landing page](https://github.com/Tamirucode/react-todoitem/assets/116649197/1f6e908b-f916-4bfc-89af-a4601f2f9a78)
+
 
 ## How to use todolist app
 
@@ -128,7 +129,8 @@ This site is targeted towards adults and young children who want to plan persona
     
     -  The navigation clearly tells the user the todo name logo and website and makes of information easy to find.
        
- ![ppp5 navlink](https://github.com/Tamirucode/react-todoitem/assets/116649197/c9568d6d-b3a6-4363-b6e3-3ad634487beb)
+ ![ppp5 navlink](https://github.com/Tamirucode/react-todoitem/assets/116649197/86a00788-b91f-4bc9-8ba8-7ebc62a8d8dd)
+
     
 
 - The Home Section
@@ -138,12 +140,18 @@ This site is targeted towards adults and young children who want to plan persona
     - This section shows todolist and date created by users.
  
     
-![ppp5 home](https://github.com/Tamirucode/react-todoitem/assets/116649197/ac543c00-0b0b-4ffa-bde3-76f9a9c2296a)
+![ppp5 home](https://github.com/Tamirucode/react-todoitem/assets/116649197/fb0e85e0-2574-478e-a36e-e90c65cde0ff)
+
+    
+   - Below image shows logged-in user home page todolist and date created .
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/03edad64-0288-442f-9f24-a32e197d9eb0)
 
 
- - The home section includes search bar to users can find specific todolist title or filter todolists by user name
+- The home section includes search bar to users can find specific todolist title or filter todolists by user name
   
-![ppp 5 filter  user name](https://github.com/Tamirucode/react-todoitem/assets/116649197/30797281-51b9-40f4-9622-99e9e8af0720)
+![ppp 5 filter  user name](https://github.com/Tamirucode/react-todoitem/assets/116649197/65f80527-1252-44a5-a03d-87f00ebe7726)
+
 
 - The Sign Up Form
     
@@ -270,6 +278,10 @@ This site is targeted towards adults and young children who want to plan persona
  -  JWT (JSON Web Token)
 
      - securely transmitting information  between parties as a JSON object
+ 
+ - react-toastify
+
+     - allows me to add notifications to my app with ease
 
 ## Testing
 
@@ -279,39 +291,41 @@ This site is targeted towards adults and young children who want to plan persona
 
     2. I checked user can accomplished CRUDE functionality and form has error handling 
     
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/67f19246-21ea-4c6a-a1e1-b30a6346182e)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/f620908c-8571-4ae0-aeed-524259cfd86d)
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/8e5680b2-d736-496d-890f-283de15a0fdf)
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/ea90caa2-b1d2-49e6-b7e2-c99d7cdab9b1)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/e71e77ae-6ee4-458e-b4b4-614df446dca2)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/e01b858c-4bff-4715-b9a2-babc57e3e770)
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/1cb66bf1-14e8-4a39-87a7-7aceb6f33e3e)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/d107bbcc-906c-42cd-ba27-d7521ff8f552)
+
 
     
        2.1  A user can created todolist :- Below screen shot
 
- ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/b81d2c4c-c542-4898-b575-cb22c9e707b2)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/e90f7fdb-3a25-4c6a-aca8-936898c51084)
 
 
-        2.1  A user can edited todolist :- Below screen shot
+       2.1  A user can edited todolist :- Below screen shot
 
- ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/3610fce0-2465-4d1a-9b5c-f7842f04b531)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/1f4a58a3-5a47-424c-909e-4505c95cbb4f)
 
- ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/24973fe7-c83d-455b-af1b-bf7db5f4b707)
 
        2.2  A user can delete todolist :- Below screen shot
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/e7594364-7833-400b-a462-7cd9ea77ae2a)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/69b56433-7175-4d9e-ac62-60bad3514a52)
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/593e6cba-2004-40ef-912a-3dc7a0e307b9)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/8b8ab0d3-a9c9-4ace-9d82-756968b43420)
+
 
        2.3  A user can filter todolist by name or title :- Below screen shot
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/4c41ed6b-4660-4633-9648-e776ae8b4192)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/7ebb5b7b-410a-49f7-bf6a-aa003642c0f0)
+
 
        2.4  A user can create todoitem under specific todolist :- Below screen shot
 
-
 ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/22962d0b-4015-4b64-9d31-9f261a6a44eb)
+
 ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/9619d468-829b-416b-b216-fe0c23fadf8f)
 
 
@@ -332,27 +346,47 @@ This site is targeted towards adults and young children who want to plan persona
 
 
       
-      
-      2.7  A user can filter todoitem by name or title :- Below screen shot
+      2.7  A user can create todoitempriority for specific todoitem :- Below screen shot
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/319e9cd6-b297-404c-85f0-6e56491c41eb)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/132e8be3-318b-4b7a-93ec-2ebcc4c40d76)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/337e8c76-2313-48ea-834b-a7e4e80d2755)
+
+      
+      2.8 A user can edit todoitempriority for specific todoitem :- Below screen shot 
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/f8f999d9-924e-46b6-86fd-8184c484ff0a)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/c6fb087a-ae36-4b30-973e-20aeb4a9bd08)
+
+      
+      2.9 A user can delete todoitempriority for specific todoitem :- Below screen shot 
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/05cf53cb-f905-476c-8bc8-45e3dd95b350)
+
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/10d5e69c-63dc-4f13-8552-a0587dc483bb)
+
 
 
       3. the site has been tested in different devices provided below iPad Air
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/ffcfa242-00ee-42b3-8663-0c8bdfe59616)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/811a52f0-2b89-4fdc-bc71-f5696c83bd56)
+
 
       4. the site has been tested in different devices provided below iPhone 6/7/8 plus
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/3e2451b1-8abd-4e8b-b0ae-929a924fe539)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/4b569023-4e1e-4aeb-ae56-42b59edf8f03)
+
 
       5. the site has been tested in different devices provided below Samsung Galaxy 20/ultra
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/ce98a82a-346d-42bf-bb8b-e15b88f3a31e)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/5c85b473-6018-48cb-bc0b-d35857feaad0)
+
 
       6. the site has been tested in different devices provided below Samsung iPhone 12  Pro
 
-![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/66087c32-a007-4b4d-ad8f-239fef3abf16)
+![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/635c7671-bd48-4448-998e-5020bd2162eb)
+
 
 ## Validator Testing 
 
@@ -579,7 +613,8 @@ This site is targeted towards adults and young children who want to plan persona
 
              3.5  Add api/ to the beginning of all the API URLs, excluding the path for the home page and admin panel
 
- ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/83c731d9-807f-4eb3-948a-95955b13993d)
+ ![image](https://github.com/Tamirucode/react-todoitem/assets/116649197/ee164069-047f-431b-ba76-37092f46ec79)
+)
 
    4.  In axiosDefault.js:
 
@@ -680,6 +715,10 @@ This site is targeted towards adults and young children who want to plan persona
    - The text for the Home page I created and modified, finally polished by fellow student
    
    - The icons in the navlink were taken from [Font Awesome](https://fontawesome.com/)
+
+   - The implementation of react-toastify notfication referenced from
+
+     - [react-toastify](https://www.npmjs.com/package/react-toastify)
    
    - The instructions deployment steps were taken from
 
