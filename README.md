@@ -35,9 +35,9 @@ This site is targeted towards adults and young children who want to plan persona
 
    used for to create todoitempriority, after they finished fill out the form, the user needs open profile page just by click the profile image
 
-   itself which is a link to see their created todolists, todoitems and todoitempriorities. But the user wanted to see only created todolists just only
+   itself which is a link to see their created todolists, todoitems and todoitempriorities. But the user wanted to see only created todolists
 
-   by click top left navbar home page link 
+   just only by click top left navbar home page link 
 
 ## User Story
        
@@ -124,6 +124,11 @@ This site is targeted towards adults and young children who want to plan persona
  - View todoitem by completion
   
     - As a logged in user I can view todoitems completed sothat I can distingush between completed and those still need action.
+  
+ - View todoitem by priority
+  
+    - As a logged in user I can view prioritised todoitems sothat I can tell immediate attention and leave them until later.
+
 
 ## Features
 
@@ -220,10 +225,12 @@ This site is targeted towards adults and young children who want to plan persona
 
    - ToDoItemEditForm:-      returns updated/edited todoitem with form
 
-   - ToDoItemPage:-          returns all created todoitem by different user presenting in one page
+   - ToDoItemPriority :-     which returns individual todoitempriority created by user with delete and edit button functionality
+       
+   - ToDoItemprioritySelectForm:-    returns newly created todoitempriority with form
 
-   - ToDoItemsPage:-         returns search and filter form, used help user filter/search todoitem by title or username.
-  
+   - ToDoItemPrioritySelectEditForm:-      returns updated/edited todoitempriority with form
+
    - ProfilePage:-           returns user name with todolist, todoitem counts in single page
 
    - SignInForm:-           use user information inorder to authenticate their access 
