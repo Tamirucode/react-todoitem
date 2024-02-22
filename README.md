@@ -464,7 +464,7 @@ This site is targeted towards adults and young children who want to plan persona
 
  ### Remaining bugs
 
-   - After  deployment i have noticed that todoitem pk value not automatically inserted when the user created todolist
+   - After  deployment i have noticed that user action update notification seems to be not working
 
    - After a user delete todoitem "due" and avatar remain there
   
@@ -707,7 +707,7 @@ This site is targeted towards adults and young children who want to plan persona
 
    8. Testing the Build
 
-              8.1  Ensure all running servers are terminated. In any running terminals press Ctrl+C#
+              8.1  Ensure all running servers are terminated. In any running terminals press Ctrl + C
 
               8.2  In my env.py file, ensure that both the DEBUG and DEV environment variables are commented out
 
