@@ -464,9 +464,7 @@ This site is targeted towards adults and young children who want to plan persona
 
  ### Remaining bugs
 
-   - After  deployment i have noticed that user action update notification seems to be not working
-
-   - After a user delete todoitem "due" and avatar remain there
+   - After a user delete todoitem "due" and avatar remain there, similarly for delete todoitempriority "priority"
   
 ## Technologies
 
