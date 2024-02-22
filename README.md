@@ -25,11 +25,19 @@ This site is targeted towards adults and young children who want to plan persona
 
     Once an account is created, they need to login with their password and username. Afterthat, the user can see top left navbar link
 
-    there is a button addtodolist, then click that button, they will greet with blank form need to fill out todolist, after they completed, click the create button
+    there is a button addtodolist, then click that button, they will greet with blank form need to fill out todolist, after they completed,
 
-    which takes them a new blank form used for to create todoitem, after they finished fill out the form click save and go back to ToDoItem navlink, they need 
-   
-    to open this page to see their created todoitem.
+    click the create button, once the todolist created the user needs to click the todolist itself which is a link takes them a new blank form
+
+   used for to create todoitem, after they finished fill out the form click save , once the todoitem is created
+
+   the user needs to click the todoitem itself which is a link and takes them a new blank form
+
+   used for to create todoitempriority, after they finished fill out the form, the user needs open profile page just by click the profile image
+
+   itself which is a link to see their created todolists, todoitems and todoitempriorities. But the user wanted to see only created todolists just only
+
+   by click top left navbar home page link 
 
 ## User Story
        
@@ -122,10 +130,14 @@ This site is targeted towards adults and young children who want to plan persona
  - Navigation
     
     - featured at the top of the page, the navigation shows the todo name logo in the left corner: next to that Add todolist that
+
       links to the form to add todolists if logged in users
     
+
     - The  other navigation links are to the right: Home, signin and sign up which link to different section of the page.
-       there is two link inside if logged in users, namely todoitem and profile.
+
+      there is two link inside if logged in users, namely todoitem and profile.
+    
     
     -  The navigation clearly tells the user the todo name logo and website and makes of information easy to find.
        
