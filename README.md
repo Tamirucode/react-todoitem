@@ -6,7 +6,9 @@ The todolist app offers organize and manage tasks more efficiently.
 
 Users of this website will be able to create a list of todoitem that they need to complete within a certain timeframe.
 
-It also allows assign them due dates and prioritize them so they stay focused on what todoitems most.
+It also allows assign them due dates and manage your todoitems based on 
+
+three levels of priority: High, Medium, and Low, so they stay focused on what todoitems most.
 
 It enables cooperative planning, in this case, each user could have their own space with their 
 
@@ -33,11 +35,11 @@ This site is targeted towards adults and young children who want to plan persona
 
    the user needs to click the todoitem itself which is a link and takes them a new blank form
 
-   used for to create todoitempriority, after they finished fill out the form, the user needs open profile page just by click the profile image
+   used for to create todoitempriority, after they finished fill out the form, the user needs open profile page
 
-   itself which is a link to see their created todolists, todoitems and todoitempriorities. But the user wanted to see only created todolists
+   just by click the profile image itself which is a link to see their created todolists, todoitems and todoitempriorities.
 
-   just only by click top left navbar home page link 
+   But the user wanted to see only created todolists just only by click top left navbar home page link 
 
 ## User Story
        
